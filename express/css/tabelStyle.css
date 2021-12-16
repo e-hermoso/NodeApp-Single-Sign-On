@@ -1,0 +1,160 @@
+.widget {
+	width: 310px;
+	margin: 20px;
+	padding: 10px;
+	background: #f3f1eb;
+	border: 1px solid #dedbd1;
+	margin-bottom: 15px;
+}
+
+.widget a {
+	color: #222;
+	text-decoration: none;
+}
+
+.widget a:hover {
+	color: #009;
+	text-decoration: underline;
+}
+
+.tabnav li {
+	display: inline;
+	list-style: none;
+	padding-right: 5px;
+}
+.tabnav li a {
+	text-decoration: none;
+	text-transform: uppercase;
+	color: #222;
+	font-weight: bold;
+	padding: 4px 6px;
+	outline: none;
+}
+
+.tabnav li a:hover, .tabnav li a:active, .tabnav li.ui-tabs-selected a {
+	background: #dedbd1;
+	color: #222;
+	text-decoration: none;
+}
+
+
+.tabdiv {
+	margin-top: 2px;
+	background: #fff;
+	border: 1px solid #dedbd1;
+	padding: 5px;
+}
+
+.tabdiv li {
+	list-style-image: url("star.png");
+	margin-left: 20px;
+}
+
+.ui-tabs-hide {
+	display: none;
+}
+/* body {
+	font: 90%/1.45em "Helvetica Neue", HelveticaNeue, Verdana, Arial, Helvetica, sans-serif;
+	margin: 0;
+	padding: 0;
+	color: #333;
+	background-color: #f2f0f4;
+} */
+/* html,
+body {
+  height: 100%;
+} */
+/* body {
+  margin: 0;
+  background: -webkit-linear-gradient(45deg, #49a09d, #5f2c82);
+  background: #f5f2f0;
+  font-family: sans-serif;
+  font-weight: 100;
+} */
+.table-container {
+	height: calc(50vh - 65px)
+}
+
+table {
+	width: 800px;
+	border-collapse: collapse;
+	overflow: hidden;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+th,
+td {
+	padding: 15px;
+	background-color: rgba(255, 255, 255, 0.2);
+	color: #6C7A89;
+}
+
+th {
+	text-align: left;
+}
+
+thead th {
+	background-color: #95A5A6
+}
+
+tbody .main-parent-row:hover {
+	background-color: #b4daf5; /*rgba(255, 255, 255, 0.3);*/
+}
+
+.main-child-row:hover {
+	background-color: #9ecff2;
+}
+
+tbody td {
+	position: relative;
+}
+
+tr:nth-child(even) {
+	background-color: #17a2b8;
+}
+/* This code will highlight the column.*/
+/* Note: This code my not be needed. */
+/* tbody td:hover:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -9999px;
+  bottom: -9999px;
+  background-color: rgba(255, 255, 255, 0.2);
+  z-index: -1;
+} */
+
+/* child table style */
+.show_tbl {
+	display: none;
+}
+
+div.container {
+	min-width: 980px;
+	margin: 0 auto;
+}
+
+/* Animation style  */
+.animation-show-detail {
+	opacity: 0;
+	animation: fadeIn .3s linear forwards;
+}
+
+@keyframes fadeIn {
+	to {
+		opacity: 1;
+	}
+}
+
+
+.animation-hide-detail {
+	opacity: 1;
+	animation: fadeOut .3s linear forwards;
+}
+
+@keyframes fadeOut {
+	to {
+		opacity: 0;
+	}
+}
