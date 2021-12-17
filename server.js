@@ -14,7 +14,7 @@ console.debug('Server listening on port ' + port);
 const config = {
   auth: {
       clientId: "902d648f-7e6e-4323-8158-2a7b531e38e0",
-      authority: "https://login.microsoftonline.com/common/",
+      authority: "https://login.microsoftonline.com/common",
       clientSecret: "808f9ead-b8ff-4412-9288-033580e949d5"
   },
     system: {
