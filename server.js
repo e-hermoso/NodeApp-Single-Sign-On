@@ -13,9 +13,9 @@ console.debug('Server listening on port ' + port);
 // including the clientSecret
 const config = {
   auth: {
-      clientId: "8dec3eb5-6b85-43e9-8a42-2f64cae6ed18",
+      clientId: "902d648f-7e6e-4323-8158-2a7b531e38e0",
       authority: "https://login.microsoftonline.com/common/",
-      clientSecret: "MmW7Q~lvWFyvM~GfDvA6d0kWXNLs9qYrlH91e"
+      clientSecret: "808f9ead-b8ff-4412-9288-033580e949d5"
   },
     system: {
         loggerOptions: {
@@ -34,7 +34,7 @@ const config = {
 app.get('/', (req, res) => {
     const authCodeUrlParameters = {
         scopes: ["user.read"],
-        redirectUri: "https://amcdevfe.azurewebsites.net/redirect",
+        redirectUri: "https://app-single-sign-on.azurewebsites.net/redirect",
     };
 
     // get url to sign user in and consent to scopes needed for application
@@ -48,7 +48,7 @@ app.get('/redirect', (req, res) => {
     const tokenRequest = {
         code: req.query.code,
         scopes: ["user.read"],
-        redirectUri: "https://amcdevfe.azurewebsites.net/redirect",
+        redirectUri: "https://app-single-sign-on.azurewebsites.net/redirect",
     };
 
     cca.acquireTokenByCode(tokenRequest).then((response) => {
