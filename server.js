@@ -15,7 +15,7 @@ const config = {
   auth: {
       clientId: "902d648f-7e6e-4323-8158-2a7b531e38e0",
       authority: "https://login.microsoftonline.com/e4449a56-cd3d-40ba-ae32-25a63deaab3b",
-      clientSecret: "808f9ead-b8ff-4412-9288-033580e949d5"
+      clientSecret: "Ehy7Q~C.QnIdDU8PIgjBluiCt3YcMpTI8hrzw"
   },
     system: {
         loggerOptions: {
@@ -34,7 +34,7 @@ const config = {
 app.get('/', (req, res) => {
     const authCodeUrlParameters = {
         scopes: ["user.read"],
-        redirectUri: "https://app-single-sign-on.azurewebsites.net/redirect",
+        redirectUri: "http://localhost:3005/redirect",
     };
 
     // get url to sign user in and consent to scopes needed for application
@@ -48,7 +48,7 @@ app.get('/redirect', (req, res) => {
     const tokenRequest = {
         code: req.query.code,
         scopes: ["user.read"],
-        redirectUri: "https://app-single-sign-on.azurewebsites.net/redirect",
+        redirectUri: "http://localhost:3005/redirect",
     };
 
     cca.acquireTokenByCode(tokenRequest).then((response) => {
