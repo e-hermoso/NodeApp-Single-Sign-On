@@ -34,7 +34,7 @@ const config = {
 app.get('/', (req, res) => {
     const authCodeUrlParameters = {
         scopes: ["user.read"],
-        redirectUri: "http://localhost:3005/redirect",
+        redirectUri: "https://app-single-sign-on.azurewebsites.net/redirect",
     };
 
     // get url to sign user in and consent to scopes needed for application
@@ -48,7 +48,7 @@ app.get('/redirect', (req, res) => {
     const tokenRequest = {
         code: req.query.code,
         scopes: ["user.read"],
-        redirectUri: "http://localhost:3005/redirect",
+        redirectUri: "https://app-single-sign-on.azurewebsites.net/redirect",
     };
 
     cca.acquireTokenByCode(tokenRequest).then((response) => {
